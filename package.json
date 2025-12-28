@@ -20,7 +20,26 @@
         "height": 600
       },
       "resizable": true
-    }
+    },
+    "about": "Keep track of tasks with lists and due dates.",
+    "help": [
+      "Create lists",
+      "Add reminders with +",
+      "Set due dates"
+    ],
+    "docs": "https://zos-apps.github.io/reminders",
+    "site": "https://github.com/zos-apps/reminders",
+    "shortcuts": [
+      "Cmd+N New reminder",
+      "Cmd+L New list"
+    ],
+    "features": [
+      "Task lists",
+      "Due dates",
+      "Priority levels",
+      "Recurring reminders",
+      "Location alerts"
+    ]
   },
   "scripts": {
     "build": "tsup",
@@ -53,5 +72,13 @@
     "reminders",
     "macos",
     "desktop"
-  ]
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/zos-apps"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
