@@ -1,5 +1,5 @@
 {
-  "name": "@anthropic/reminders",
+  "name": "@zos-apps/reminders",
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -10,10 +10,48 @@
     "icon": "✅",
     "category": "productivity",
     "description": "Task reminders",
-    "permissions": ["storage.local", "notifications"],
-    "window": { "defaultSize": { "width": 400, "height": 600 }, "resizable": true }
+    "permissions": [
+      "storage.local",
+      "notifications"
+    ],
+    "window": {
+      "defaultSize": {
+        "width": 400,
+        "height": 600
+      },
+      "resizable": true
+    }
   },
-  "scripts": { "build": "tsup", "dev": "tsup --watch" },
-  "peerDependencies": { "react": "^18.0.0", "react-dom": "^18.0.0" },
-  "devDependencies": { "@types/react": "^18.3.0", "@types/react-dom": "^18.3.0", "tsup": "^8.3.5", "typescript": "^5.7.2" }
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "description": "Task reminders",
+  "homepage": "https://zos-apps.github.io/reminders",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zos-apps/reminders.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zos-apps/reminders/issues"
+  },
+  "author": "Hanzo AI",
+  "license": "MIT",
+  "keywords": [
+    "zos",
+    "app",
+    "reminders",
+    "macos",
+    "desktop"
+  ]
 }
