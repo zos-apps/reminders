@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { AppProps } from '@zos-apps/config';
+import { useLocalStorage } from '@zos-apps/config';
 
-interface RemindersProps { onClose: () => void; }
 interface Reminder { id: string; text: string; done: boolean; list: string; }
 
-const Reminders: React.FC<RemindersProps> = ({ onClose }) => {
-  const [reminders, setReminders] = useState<Reminder[]>([
-    { id: '1', text: 'Buy groceries', done: false, list: 'Today' },
-    { id: '2', text: 'Call mom', done: false, list: 'Today' },
-    { id: '3', text: 'Finish project', done: true, list: 'Work' },
-  ]);
+const defaultReminders: Reminder[] = [
+  { id: '1', text: 'Buy groceries', done: false, list: 'Today' },
+  { id: '2', text: 'Call mom', done: false, list: 'Today' },
+  { id: '3', text: 'Finish project', done: true, list: 'Work' },
+];
+
+const Reminders: React.FC<AppProps> = ({ onClose: _onClose }) => {
+  const [reminders, setReminders] = useLocalStorage<Reminder[]>('reminders', defaultReminders);
   const [input, setInput] = useState('');
   const [selectedList, setSelectedList] = useState('Today');
 
